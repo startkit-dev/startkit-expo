@@ -19,6 +19,7 @@
   },
   "dependencies": {
     "expo": "~48.0.6",
+    "expo-splash-screen": "~0.18.1",
     "expo-status-bar": "~1.4.4",
     "nativewind": "^3.0.0-next.34",
     "react": "18.2.0",
