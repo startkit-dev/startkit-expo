@@ -8,6 +8,7 @@
     "check": "run-s type-check test",
     "dev": "expo start -c",
     "ios": "expo start --ios",
+    "setup": "./bin/setup",
     "test": "jest --passWithNoTests",
     "type-check": "tsc --noEmit --pretty",
     "web": "expo start --web"
