@@ -9,17 +9,17 @@ const config = {
   collectCoverageFrom: [
     "**/*.{ts,tsx}",
     "!**/coverage/**",
-    "!**/node_modules/**",
+    "!**/node_modules/**"
   ],
 
   /**
    * Aliases
    */
   moduleNameMapper: {
-    "^@/(.*)$": "<rootDir>/src/$1",
+    "^@/(.*)$": "<rootDir>/src/$1"
   },
 
-  testPathIgnorePatterns: ["/node_modules/"],
-};
+  testPathIgnorePatterns: ["/node_modules/"]
+}
 
-module.exports = config;
+module.exports = config
