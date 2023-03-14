@@ -2,7 +2,11 @@
 module.exports = {
   content: ["./src/**/*.{js,jsx,ts,tsx}"],
   theme: {
-    extend: {}
+    extend: {
+      fontFamily: {
+        mono: ["SpaceMono_400Regular"]
+      }
+    }
   },
   plugins: [],
   presets: [require("nativewind/tailwind")]

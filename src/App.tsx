@@ -1,6 +1,6 @@
 import { StatusBar } from "expo-status-bar"
 
-import { PreloadApp } from "@/components/PreloadApp"
+import { PreloadApp } from "@/components/preload"
 import { HomeScreen } from "@/screens/HomeScreen"
 
 export default function App() {

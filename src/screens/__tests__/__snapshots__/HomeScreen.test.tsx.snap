@@ -3,7 +3,11 @@
 exports[`renders correctly 1`] = `
 <View>
   <Text>
-    Open up src/screens/HomeScreen.tsx to start working on your app!
+    Open up 
+    <Text>
+      src/screens/HomeScreen.tsx
+    </Text>
+     to start working on your app!
   </Text>
 </View>
 `;

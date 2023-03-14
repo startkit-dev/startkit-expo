@@ -4,6 +4,8 @@ import { View } from "react-native"
 
 import { logger } from "@/lib/logger"
 
+import { usePreloadFonts } from "./use-preload-fonts"
+
 type Props = {
   children: ReactNode
 }
@@ -22,12 +24,14 @@ SplashScreen.preventAutoHideAsync().catch((e) => {
  * assets (images, fonts, etc.)
  */
 export function PreloadApp({ children }: Props) {
+  const { fontsLoaded } = usePreloadFonts()
+
   /**
    * Check if the app is loaded by checking:
    * - if the fonts have loaded
    * - whatever else you need to check
    */
-  const isLoadingComplete = useMemo<boolean>(() => true, [])
+  const isLoadingComplete = useMemo<boolean>(() => fontsLoaded, [fontsLoaded])
 
   /**
    * Callback to hide the splash screen once the app is ready. If we call this
