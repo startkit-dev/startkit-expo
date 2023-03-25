@@ -7,11 +7,11 @@
 ## Installation
 
 ```sh
-npm run setup
+pnpm run setup
 ```
 
 ## Running the app
 
 ```sh
-npm run dev
+pnpm run dev
 ```

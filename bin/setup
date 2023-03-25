@@ -1,7 +1,17 @@
 #!/usr/bin/env sh
 
-echo "Installing dependencies ..."
-npm install
+echo "✨ Installing dependencies ..."
+pnpm install --frozen-lockfile
 
-echo "Creating .env file ..."
-cp -f .env.example .env
+echo "\n✨ Creating .env file..."
+if [ -f .env ]; then
+    echo "File already exists, skipping."
+else
+  cp .env.example .env
+fi
+
+echo "✨ Fixing nativewind ..."
+pnpm add nativewind@next
+
+
+echo "\n✨ Done. Happy coding."
