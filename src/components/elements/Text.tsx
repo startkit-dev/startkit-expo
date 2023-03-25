@@ -1,7 +1,7 @@
 import { clsx } from "clsx"
 import {
   Text as DefaultText,
-  TextProps as DefaultTextProps
+  type TextProps as DefaultTextProps
 } from "react-native"
 
 export type TextProps = DefaultTextProps & {

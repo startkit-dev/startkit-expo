@@ -1,7 +1,7 @@
 import { clsx } from "clsx"
 import {
   View as DefaultView,
-  ViewProps as DefaultViewProps
+  type ViewProps as DefaultViewProps
 } from "react-native"
 
 export type ViewProps = DefaultViewProps & {
