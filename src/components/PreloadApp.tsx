@@ -1,10 +1,10 @@
+import { SpaceMono_400Regular } from "@expo-google-fonts/space-mono"
+import { useFonts } from "expo-font"
 import * as SplashScreen from "expo-splash-screen"
-import { ReactNode, useCallback, useMemo } from "react"
-import { View } from "react-native"
+import { type ReactNode, useCallback, useMemo } from "react"
 
+import { View } from "@/components/elements"
 import { logger } from "@/lib/logger"
-
-import { usePreloadFonts } from "./use-preload-fonts"
 
 type Props = {
   children: ReactNode
@@ -24,7 +24,19 @@ SplashScreen.preventAutoHideAsync().catch((e) => {
  * assets (images, fonts, etc.)
  */
 export function PreloadApp({ children }: Props) {
-  const { fontsLoaded } = usePreloadFonts()
+  /**
+   * Load the fonts we need for the app.
+   */
+  const [fontsLoaded, fontLoadError] = useFonts({
+    SpaceMono_400Regular
+  })
+
+  /**
+   * Upon a font loading error, show a message in the console.
+   */
+  if (fontLoadError) {
+    logger.error("Error loading fonts", fontLoadError)
+  }
 
   /**
    * Check if the app is loaded by checking:
@@ -42,10 +54,18 @@ export function PreloadApp({ children }: Props) {
    */
   const onLayoutRootView = useCallback(async () => {
     if (isLoadingComplete) {
-      logger.log("(PreloadApp) ✅ App is loaded and rendered.")
+      logger.log("  > ✅ App is loaded and rendered.")
       await SplashScreen.hideAsync()
     }
   }, [isLoadingComplete])
+
+  /**
+   * If the app is not loaded yet, then we don't want to render anything.
+   */
+  if (!isLoadingComplete) {
+    logger.log("  > App loading...")
+    return <></>
+  }
 
   return (
     <>

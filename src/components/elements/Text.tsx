@@ -1,7 +1,7 @@
 import { clsx } from "clsx"
 import {
   Text as DefaultText,
-  TextProps as DefaultTextProps
+  type TextProps as DefaultTextProps
 } from "react-native"
 
 export type TextProps = DefaultTextProps & {
@@ -19,7 +19,7 @@ export function Text({ mono, ...props }: TextProps) {
   return (
     <DefaultText
       className={clsx(
-        "text-gray-900 dark:text-gray-50",
+        "text-black dark:text-white",
         mono && "font-mono font-normal"
       )}
       {...props}
