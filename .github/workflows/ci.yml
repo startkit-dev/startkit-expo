@@ -1,4 +1,4 @@
-name: Lint & Test
+name: Check
 
 on:
   push:
@@ -9,15 +9,16 @@ on:
       - main
 
 jobs:
-  lint_and_test:
-    name: "Lint & Test"
+  check:
     runs-on: ubuntu-latest
-    env:
-      NODE_ENV: test
     steps:
       - uses: actions/checkout@v3
+      - uses: pnpm/action-setup@v2
+        with:
+          version: ^7.30.2
       - uses: actions/setup-node@v3
         with:
-          cache: "npm"
-      - run: npm run setup
-      - run: npm run check
+          node-version: 18
+          cache: "pnpm"
+      - run: pnpm run setup
+      - run: pnpm run check
