@@ -1,10 +1,10 @@
+import { SpaceMono_400Regular } from "@expo-google-fonts/space-mono"
+import { useFonts } from "expo-font"
 import * as SplashScreen from "expo-splash-screen"
 import { ReactNode, useCallback, useMemo } from "react"
 import { View } from "react-native"
 
 import { logger } from "@/lib/logger"
-
-import { usePreloadFonts } from "./use-preload-fonts"
 
 type Props = {
   children: ReactNode
@@ -24,7 +24,19 @@ SplashScreen.preventAutoHideAsync().catch((e) => {
  * assets (images, fonts, etc.)
  */
 export function PreloadApp({ children }: Props) {
-  const { fontsLoaded } = usePreloadFonts()
+  /**
+   * Load the fonts we need for the app.
+   */
+  const [fontsLoaded, fontLoadError] = useFonts({
+    SpaceMono_400Regular
+  })
+
+  /**
+   * Upon a font loading error, show a message in the console.
+   */
+  if (fontLoadError) {
+    logger.error("Error loading fonts", fontLoadError)
+  }
 
   /**
    * Check if the app is loaded by checking:
