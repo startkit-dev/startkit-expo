@@ -2,8 +2,8 @@ import { SpaceMono_400Regular } from "@expo-google-fonts/space-mono"
 import { useFonts } from "expo-font"
 import * as SplashScreen from "expo-splash-screen"
 import { ReactNode, useCallback, useMemo } from "react"
-import { View } from "react-native"
 
+import { View } from "@/components/elements"
 import { logger } from "@/lib/logger"
 
 type Props = {
