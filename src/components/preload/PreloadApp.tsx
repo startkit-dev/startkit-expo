@@ -42,10 +42,18 @@ export function PreloadApp({ children }: Props) {
    */
   const onLayoutRootView = useCallback(async () => {
     if (isLoadingComplete) {
-      logger.log("(PreloadApp) ✅ App is loaded and rendered.")
+      logger.log("  > ✅ App is loaded and rendered.")
       await SplashScreen.hideAsync()
     }
   }, [isLoadingComplete])
+
+  /**
+   * If the app is not loaded yet, then we don't want to render anything.
+   */
+  if (!isLoadingComplete) {
+    logger.log("  > App loading...")
+    return <></>
+  }
 
   return (
     <>
