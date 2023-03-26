@@ -16,7 +16,7 @@ const config = {
    * Aliases
    */
   moduleNameMapper: {
-    "^@/(.*)$": "<rootDir>/src/$1"
+    "^@/(.*)$": "<rootDir>/$1"
   },
 
   testPathIgnorePatterns: ["/node_modules/"]

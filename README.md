@@ -1,4 +1,4 @@
-<img src="./src/assets/icon.png" align="right" width="120" height="120" />
+<img src="./assets/icon.png" align="right" width="120" height="120" />
 
 # startkit-expo
 
