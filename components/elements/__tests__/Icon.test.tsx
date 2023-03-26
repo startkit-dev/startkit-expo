@@ -1,9 +1,9 @@
 import { create } from "react-test-renderer"
 
-import { Link } from "../Link"
+import { Icon } from "../Icon"
 
 test("renders correctly", () => {
-  const tree = create(<Link href="/">Link test</Link>).toJSON()
+  const tree = create(<Icon name="x" />).toJSON()
 
   expect(tree).toMatchSnapshot()
 })

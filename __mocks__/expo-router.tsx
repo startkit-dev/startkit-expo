@@ -1,5 +1,20 @@
-import { ReactNode } from "react"
+import type { ReactNode } from "react"
 
-export function Link({ children }: { children: ReactNode }) {
+const expoRouter = jest.requireActual("expo-router")
+
+function Link({ children }: { children: ReactNode }) {
   return <>{children}</>
+}
+
+function useNavigation() {
+  return {
+    navigate: jest.fn(),
+    dispatch: jest.fn()
+  }
+}
+
+module.exports = {
+  ...expoRouter,
+  Link,
+  useNavigation
 }
