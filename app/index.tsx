@@ -1,4 +1,4 @@
-import { Text, View } from "@/components/elements"
+import { Link, Text, View } from "@/components/elements"
 
 export default function Page() {
   return (
@@ -11,6 +11,7 @@ export default function Page() {
         <Text className="mt-2 text-xl">
           Open `<Text mono>app/index.tsx</Text>` to get started.
         </Text>
+        <Link href="/modal">Open Modal</Link>
       </View>
     </View>
   )

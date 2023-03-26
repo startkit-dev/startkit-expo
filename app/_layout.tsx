@@ -1,5 +1,5 @@
 import { SpaceMono_400Regular, useFonts } from "@expo-google-fonts/space-mono"
-import { Slot, SplashScreen } from "expo-router"
+import { SplashScreen, Stack } from "expo-router"
 
 import { logger } from "@/lib/logger"
 
@@ -25,5 +25,19 @@ export default function Layout() {
     return <SplashScreen />
   }
 
-  return <Slot />
+  return (
+    <Stack
+      screenOptions={{
+        headerShown: false
+      }}
+    >
+      <Stack.Screen
+        name="modal"
+        options={{
+          presentation: "modal",
+          headerShown: false
+        }}
+      />
+    </Stack>
+  )
 }
