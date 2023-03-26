@@ -21,9 +21,5 @@ module.exports = {
       foregroundImage: "./assets/adaptive-icon.png",
       backgroundColor: "#ffffff"
     }
-  },
-  web: {
-    favicon: "./assets/favicon.png",
-    bundler: "metro"
   }
 }

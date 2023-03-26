@@ -14,8 +14,7 @@
     "lint": "eslint .",
     "setup": "./bin/setup",
     "test": "jest --passWithNoTests",
-    "type-check": "tsc --noEmit --pretty",
-    "web": "expo start --web"
+    "type-check": "tsc --noEmit --pretty"
   },
   "dependencies": {
     "@expo-google-fonts/space-mono": "^0.2.3",
