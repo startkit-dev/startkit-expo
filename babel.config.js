@@ -11,8 +11,7 @@ module.exports = function (api) {
             "@": "./"
           }
         }
-      ],
-      require.resolve("expo-router/babel")
+      ]
     ],
     presets: ["babel-preset-expo", "nativewind/babel"]
   }

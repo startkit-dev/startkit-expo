@@ -1,5 +1,4 @@
 export * from "./Icon"
-export * from "./Link"
 export * from "./ModalView"
 export * from "./Pressable"
 export * from "./Text"

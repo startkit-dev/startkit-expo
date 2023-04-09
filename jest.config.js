@@ -19,7 +19,7 @@ const config = {
     "^@/(.*)$": "<rootDir>/$1"
   },
 
-  testPathIgnorePatterns: ["/node_modules/"]
+  testPathIgnorePatterns: ["/node_modules/", "test-helpers"]
 }
 
 module.exports = config

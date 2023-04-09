@@ -7,7 +7,7 @@
 ## Features
 
 - The latest [Expo 48](https://expo.dev)
-- [Expo Router](https://expo.github.io/router/docs) with the `/app` directory
+- [React Navigation 6](https://reactnavigation.org/) with typescript bindings.
 - [Typescript](https://www.typescriptlang.org/) for a rock-solid codebase
 - [ESLint](https://eslint.org/) + [Prettier](https://prettier.io/) for readable, safe code
 - [TailwindCSS](https://tailwindcss.com/) for utility-first CSS via [Nativewind](https://www.nativewind.dev/)
