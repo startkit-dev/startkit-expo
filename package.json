@@ -18,7 +18,6 @@
   },
   "dependencies": {
     "@expo-google-fonts/space-mono": "^0.2.3",
-    "@expo/vector-icons": "^13.0.0",
     "@react-navigation/native": "^6.1.6",
     "@react-navigation/native-stack": "^6.9.12",
     "clsx": "^1.2.1",
@@ -30,6 +29,7 @@
     "expo-splash-screen": "~0.18.1",
     "expo-status-bar": "~1.4.4",
     "expo-system-ui": "~2.2.1",
+    "lucide-react-native": "^0.137.0",
     "nativewind": "3.0.0-next.34",
     "react": "18.2.0",
     "react-native": "0.71.6",

@@ -4,9 +4,6 @@ dependencies:
   '@expo-google-fonts/space-mono':
     specifier: ^0.2.3
     version: 0.2.3
-  '@expo/vector-icons':
-    specifier: ^13.0.0
-    version: 13.0.0
   '@react-navigation/native':
     specifier: ^6.1.6
     version: 6.1.6(react-native@0.71.6)(react@18.2.0)
@@ -40,6 +37,9 @@ dependencies:
   expo-system-ui:
     specifier: ~2.2.1
     version: 2.2.1(expo@48.0.10)
+  lucide-react-native:
+    specifier: ^0.137.0
+    version: 0.137.0(prop-types@15.8.1)(react-native-svg@13.4.0)(react-native@0.71.6)(react@18.2.0)
   nativewind:
     specifier: 3.0.0-next.34
     version: 3.0.0-next.34(react@18.2.0)(tailwindcss@3.3.1)
@@ -7082,6 +7082,20 @@ packages:
     resolution: {integrity: sha512-jumlc0BIUrS3qJGgIkWZsyfAM7NCWiBcCDhnd+3NNM5KbBmLTgHVfWBcg6W+rLUsIpzpERPsvwUP7CckAQSOoA==}
     engines: {node: '>=12'}
     dev: true
+
+  /lucide-react-native@0.137.0(prop-types@15.8.1)(react-native-svg@13.4.0)(react-native@0.71.6)(react@18.2.0):
+    resolution: {integrity: sha512-c4UTbnP4Fdj04ubmf1EeKXFFBbh81iQxqmmRF0d4QwfobvnehcqWcFrzWxQqYF+J+wnIj5pzIZZulwc4xLfvMA==}
+    peerDependencies:
+      prop-types: ^15.7.2
+      react: ^16.5.1 || ^17.0.0 || ^18.0.0
+      react-native: '*'
+      react-native-svg: ^12.0.0 || ^13.0.0
+    dependencies:
+      prop-types: 15.8.1
+      react: 18.2.0
+      react-native: 0.71.6(@babel/core@7.21.4)(@babel/preset-env@7.21.4)(react@18.2.0)
+      react-native-svg: 13.4.0(react-native@0.71.6)(react@18.2.0)
+    dev: false
 
   /make-dir@2.1.0:
     resolution: {integrity: sha512-LS9X+dc8KLxXCb8dni79fLIIUA5VyZoyjSMCwTluaXA0o27cCK0bhXkpgw+sTXVpPy/lSO57ilRixqk0vDmtRA==}
