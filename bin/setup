@@ -10,8 +10,4 @@ else
   cp .env.example .env
 fi
 
-echo "✨ Fixing nativewind ..."
-pnpm add nativewind@next
-
-
 echo "\n✨ Done. Happy coding."
